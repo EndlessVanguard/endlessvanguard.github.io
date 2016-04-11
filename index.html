@@ -4,12 +4,14 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
+
         <div class="container">
             <h1>
                 Bitcoin Remunerate - API for content payments
             </h1>
 
             <section>
+
                 <h2>Overview</h2>
                 <p>
                     Content creators struggle with getting paid for their online work.
@@ -20,6 +22,14 @@
                 <p>
                     With Bitcoin Remunerate you can have your users pay a small fee such as $0.10 (or more, or less), and <em>instantly</em> get access to your content.
                 </p>
+            </section>
+
+            <section>
+              <h2>Demo</h2>
+              <div id="remunerate-content"></div>
+              <script>
+              (function remunerate(e,t){var n=!1,r=function(){function e(e){return t+e}var t="remunerate:content:";return{getAddress:function(t){return localStorage.getItem(e(t))},setAddress:function(t,n){localStorage.setItem(e(t),n)}}}(),o=function(){function e(e,t){t=t||"remunerate-content",document.getElementById(t).innerHTML=e}function t(t){return e('Please pay 1 satoshi to <a href="bitcoin:'+t+'">'+t+"</a>. All payments will be donated to the Red Cross.")}function n(t){return e(t)}return{displayPrompt:t,displayContent:n}}(),s=function(){function e(e,t){var n="http://remunerate.endlessvanguard.com/0/"+e;return console.log("we are about to add address",t,e),null!==t&&(n+="?address="+t),n}function t(t,n,r,o){var s=new XMLHttpRequest;s.onreadystatechange=function(){4===s.readyState&&o(s.status,s.responseText)},s.open("GET",e(n,r)),s.send()}return{get:t}}(),a=function(){if(!n){var a=r.getAddress(t);s.get(e,t,a,function(e,s){if(200===e)n=!0,o.displayContent(s);else if(402===e){var a=JSON.parse(s);r.setAddress(t,a.address),o.displayPrompt(a.address),setTimeout(u,2e3)}else console.log("bad tings mon")})}},u=a.bind(this);u()})('apitoken', 'momona-demo-video')
+              </script>
             </section>
 
             <section>
