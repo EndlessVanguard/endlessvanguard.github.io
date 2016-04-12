@@ -26,6 +26,7 @@ gulp.task('server', ['watch', 'build'], () => {
     gulp.src('.')
         .pipe(server({
           livereload: true,
+          open: true,
           host: ipAddress || 'localhost' // hack to be able to debug on other devices
         }))
   })
