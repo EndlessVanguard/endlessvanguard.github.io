@@ -1,19 +1,23 @@
 * {box-sizing: border-box}
 
- body {
-   margin:0;padding:0;
+@soothingBlack: #404040;
+@momoVanilla: rgba(147,128,108,.1);
+@hintOfDarkness: rgba(0,0,0,0.02);
 
-   font-weight: 300;
-   font: 300 1em/1.4 'Open Sans',sans-serif;
-   color: #404040;
- }
+body {
+  margin:0;padding:0;
 
- .flex-container {
+  font-weight: 300;
+  font: 300 1em/1.4 'Open Sans',sans-serif;
+  color: @soothingBlack;
+}
+
+.flex-container {
   display: flex;
   flex-direction: column;
 
   header.title-bar {
-    background: rgba(147,128,108,.1);
+    background: @momoVanilla;
     padding-left: 8px;
     padding-right: 8px;
     margin-bottom: 1rem;
@@ -32,10 +36,11 @@
       * {}
     }
     .demo {
-      background: rgba(0,0,0,0.02);
+      background: @hintOfDarkness;
       padding: 8px;
       border: 1px solid;
       border-radius: 3px;
+      min-width: 350px;
     }
   }
- }
+}
