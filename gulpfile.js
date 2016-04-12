@@ -5,6 +5,8 @@ const autoprefix = new (require('less-plugin-autoprefix'))({
 })
 const server = require('gulp-server-livereload')
 
+
+
 gulp.task('less', () => {
   return gulp.src('./styles/index.less')
              .pipe(less({
@@ -20,8 +22,11 @@ gulp.task('watch', () => {
 gulp.task('build', ['less'])
 
 gulp.task('server', ['watch', 'build'], () => {
-  return gulp.src('.')
-             .pipe(server({
-               livereload: true
-             }))
+  require('dns').lookup(require('os').hostname(), function (err, ipAddress, fam) {
+    gulp.src('.')
+        .pipe(server({
+          livereload: true,
+          host: ipAddress || 'localhost' // hack to be able to debug on other devices
+        }))
+  })
 })
