@@ -1,41 +1,54 @@
 <html>
     <head>
-        <title>Bitcoin Remunerate - API for content payments</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="index.css" />
     </head>
     <body>
+        <div class="flex-container">
+            <header class="title-bar">
+                <h1>Momona</h1>
+            </header>
+            <section class="hero">
+                <section class="copy">
+                    <h2>Better monetization on the web</h2>
 
-        <div class="container">
-            <h1>
-                Bitcoin Remunerate - API for content payments
-            </h1>
+                    <p>
+                        Ad blocking has gone mainstream.
+                        With Momona, you don't have to rely on ads for income from your web content. Instead users pay-per-view. With Bitcoin technology you can charge as little as 5 cent to see your content.
+                    </p>
+                    <p>
+                        It's easy!
+                    </p>
 
-            <section>
+                    <a href="mailto:hello@martinjosefsson.com">
+                        Get in touch
+                    </a>
 
-                <h2>Overview</h2>
-                <p>
-                    Content creators struggle with getting paid for their online work.
-                </p>
-                <p>
-                    Users do not want to lock into a subscription for every content source they want to enjoy.
-                </p>
-                <p>
-                    With Bitcoin Remunerate you can have your users pay a small fee such as $0.10 (or more, or less), and <em>instantly</em> get access to your content.
-                </p>
+                </section>
+                <section class="demo">
+                    <h3>Try Momona now</h3>
+                    <div id="remunerate-content"></div><script>
+                     (function remunerate(t){var e=!1,n=function(){function t(t){return e+t}var e="remunerate:content:";return{getAddress:function(e){return localStorage.getItem(t(e))},setAddress:function(e,n){localStorage.setItem(t(e),n)}}}(),r=function(){function t(t,e){e=e||"remunerate-content",document.getElementById(e).innerHTML=t}function e(e){return t('Please pay 1 satoshi to <a href="bitcoin:'+e+'">'+e+"</a>")}function n(e){return t(e)}return{displayPrompt:e,displayContent:n}}(),o=function(){function t(t,e){var n=0,r="http://remunerate.endlessvanguard.com/"+n+"/"+t;return null!==e&&(r+="?address="+e),r}function e(e,n,r){var o=new XMLHttpRequest;o.onreadystatechange=function(){4===o.readyState&&r(o.status,o.responseText)},o.open("GET",t(e,n)),o.send()}return{get:e}}(),s=function(){if(!e){var s=n.getAddress(t);o.get(t,s,function(o,s){if(200===o)e=!0,r.displayContent(s);else if(402===o){var u=JSON.parse(s);n.setAddress(t,u.address),r.displayPrompt(u.address),setTimeout(a,2e3)}else console.log("bad tings mon")})}},a=s.bind(this);a()})('momona-demo-video')
+                    </script>
+                </section>
             </section>
 
-            <section>
-              <h2>Demo</h2>
-              <div id="remunerate-content"></div>
-              <script>
-(function remunerate(t){var e=!1,n=function(){function t(t){return e+t}var e="remunerate:content:";return{getAddress:function(e){return localStorage.getItem(t(e))},setAddress:function(e,n){localStorage.setItem(t(e),n)}}}(),r=function(){function t(t,e){e=e||"remunerate-content",document.getElementById(e).innerHTML=t}function e(e){return t('Please pay 1 satoshi to <a href="bitcoin:'+e+'">'+e+"</a>")}function n(e){return t(e)}return{displayPrompt:e,displayContent:n}}(),o=function(){function t(t,e){var n=0,r="http://remunerate.endlessvanguard.com/"+n+"/"+t;return null!==e&&(r+="?address="+e),r}function e(e,n,r){var o=new XMLHttpRequest;o.onreadystatechange=function(){4===o.readyState&&r(o.status,o.responseText)},o.open("GET",t(e,n)),o.send()}return{get:e}}(),s=function(){if(!e){var s=n.getAddress(t);o.get(t,s,function(o,s){if(200===o)e=!0,r.displayContent(s);else if(402===o){var u=JSON.parse(s);n.setAddress(t,u.address),r.displayPrompt(u.address),setTimeout(a,2e3)}else console.log("bad tings mon")})}},a=s.bind(this);a()})('momona-demo-video')
-              </script>
+            <section class="why-momona">
+                With Momona
+                <ul>
+                    <li>
+                        Visitors pay you directly - instead of you getting crumbles from Ad Networks
+                    </li>
+                    <li>
+                        Your readers are your customers - not advertisers
+                    </li>
+                </ul>
             </section>
 
-            <section>
-                <h2>
-                    Stay up to date
-                </h2>
+            <section class="get-in-touch">
                 <!-- Begin MailChimp Signup Form -->
                 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
@@ -52,6 +65,7 @@
 
                 <!--End mc_embed_signup-->
             </section>
+
         </div>
     </body>
 </html>
