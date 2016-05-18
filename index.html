@@ -11,11 +11,11 @@
 
       <section class="hero">
         <section class="copy">
-          <h2>Better monetization on the web</h2>
+          <h2>Better Monetization On The Web</h2>
 
           <p>
             Ad blocking has gone mainstream.
-            With Momona, you don't have to rely on ads for income from your web content. Instead users pay-per-view. With Bitcoin technology you can charge as little as 5 cent to see your content.
+            With Momona, you don't have to rely on ads for income from your web content. Instead users pay-per-view. With Bitcoin technology you can charge as little as 5 cents to display your content.
           </p>
           <p>
             It's easy!
@@ -27,7 +27,7 @@
         </section>
 
         <section class="demo">
-          <h3>Try Momona now</h3>
+          <h3>Try Momona Now</h3>
           <div id="remunerate-content"></div>
           <script>
             (function remunerate(e){var t=!1,n=function(){function e(e){return t+e}var t="remunerate:content:";return{getAddress:function(t){return localStorage.getItem(e(t))},setAddress:function(t,n){localStorage.setItem(e(t),n)}}}(),r=function(){function e(e,t){t=t||"remunerate-content",document.getElementById(t).innerHTML=e}function t(t){var n="bitcoin:"+t.address.toString()+"?amount="+t.satoshis/1e8+"&label="+encodeURI("Momona: "+t.label)+t.address.toString(),r="Please pay "+t.satoshis/1e8+" bitcoin to "+t.address.toString(),o='<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+n+'" alt="qr code"></img>';return e('<a href="'+n+'">'+r+o+"</a>")}function n(t){return e(t)}return{displayPrompt:t,displayContent:n}}(),o=function(){function e(e,t){var n=0,r="http://api.getmomona.com/"+n+"/content/"+e;return null!==t&&(r+="?address="+t),r}function t(t,n,r){var o=new XMLHttpRequest;o.onreadystatechange=function(){4===o.readyState&&r(o.status,o.responseText)},o.open("GET",e(t,n)),o.send()}return{get:t}}(),s=function(){if(!t){var s=n.getAddress(e);o.get(e,s,function(o,s){if(200===o)t=!0,r.displayContent(s);else if(402===o){var i=JSON.parse(s);n.setAddress(e,i.address),r.displayPrompt(i),setTimeout(a,2e3)}else console.log("bad tings mon")})}},a=s.bind(this);a()})('momona-demo-video')
@@ -36,7 +36,7 @@
       </section>
 
       <section class="why-momona">
-        <p>With Momona</p>
+        <h3>With Momona:</h3>
         <ul>
           <li>
             Visitors pay you directly - instead of you getting crumbles from Ad Networks
@@ -53,7 +53,7 @@
         <div id="mc_embed_signup">
           <form action="//endlessvanguard.us12.list-manage.com/subscribe/post?u=41129d43689efe073d3d3e864&amp;id=2a1c86ba4d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-	          <label for="mce-EMAIL">Subscribe to our mailing list</label>
+	          <label for="mce-EMAIL">Subscribe to be notified of Momona news</label>
 	          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_41129d43689efe073d3d3e864_2a1c86ba4d" tabindex="-1" value=""></div>
