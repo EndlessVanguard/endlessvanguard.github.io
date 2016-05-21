@@ -1,0 +1,29 @@
+{
+  "name": "momona-landing-page",
+  "version": "1.0.0",
+  "description": "The landing page, with information about our product.",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp build",
+    "server": "gulp server",
+    "less": "gulp less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EndlessVanguard/endlessvanguard.github.io.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/EndlessVanguard/endlessvanguard.github.io/issues"
+  },
+  "homepage": "https://github.com/EndlessVanguard/endlessvanguard.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.1",
+    "gulp-less": "^3.0.5",
+    "gulp-server-livereload": "^1.7.3",
+    "less-plugin-autoprefix": "^1.5.1"
+  }
+}
